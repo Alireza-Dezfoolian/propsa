@@ -1,6 +1,6 @@
-# propsa
-propsa Check Process app
-@copyright propsa
+# prospa
+prospa Check Process app
+@copyright prospa
 
 By: Alireza Dezfoolian
 

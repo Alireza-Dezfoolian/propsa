@@ -1,6 +1,6 @@
-// by Alireza Dezfoolian for propsa Test
+// by Alireza Dezfoolian for prospa Test
 
-var app = angular.module('propsa', []);
+var app = angular.module('prospa', []);
 
 app.controller('propsaCheck', ['$scope', '$location', '$anchorScroll', function($scope, $location, $anchorScroll) {
     $scope.checks = [];
