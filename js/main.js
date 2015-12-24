@@ -18,7 +18,7 @@ app.controller('prospaCheck', ['$scope', '$location', '$anchorScroll', function(
         $anchorScroll();
 
         //avoide adding incomplete forms + 
-        if (($scope.repeate()) && ($scope.info.date !== undefined) && ($scope.info.payee !== undefined) && ($scope.info.amount !== undefined)) {
+        if (($scope.repeat()) && ($scope.info.date !== undefined) && ($scope.info.payee !== undefined) && ($scope.info.amount !== undefined)) {
             $scope.checks.push($scope.info);
             $scope.info = {};
             $scope.sum = "";
@@ -43,7 +43,7 @@ app.controller('prospaCheck', ['$scope', '$location', '$anchorScroll', function(
         console.log($scope.checks);
     };
 
-    $scope.repeate = function() {
+    $scope.repeat = function() {
         if ($scope.repeated !== true) {
             return true;
         }
