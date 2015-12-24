@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Prospa - add check</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body ng-app="propsa" ng-controller="propsaCheck">
+    <header>
+        <div class="top-bar">
+            <div class="col-xs-offset-1"> <span class="glyphicon glyphicon-phone-alt"></span> Need help? Call us: 1300 854 120</div>
+        </div>
+        <div class="header">
+            <div class="u-padding-top-30">
+                <img class="col-xs-offset-1" src="Images/ProspaLogo.png" alt="">
+                <div class="col-xs-offset-1">Introduced to you by Westpac</div>
+            </div>
+            <div class="u-margin-top--46">
+                <img class="col-xs-offset-8 col-md-offset-10" src="Images/WestpacLogo.png" alt="">
+            </div>
+        </div>
+        <div class="cta-header text-center">
+            <div class="content">
+                <h1>Looking to grow your business?</h1>
+                <p>Westpac introduces Prospa, a leading Australian online business lender,</br> to provide an unsecured business loan for $5-50k that is fast and simple.</p>
+                <button href="#check" ng-click="generate()" class="btn btn-lg btn-transparent">GENERATE</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="middle text-center" id="check">
+            <div class="container">
+                <h1>Let’s Get Started</h1>
+                <p>To start your application at Prospa, simply create to your Prospa account. </br>Enter your email address to sign in or create an account</p>
+                <form ng-submit="SendHttpPostData()" class="form-horizontal" role="form">
+                    <div class="form-group has-feedback has-feedback-left">
+                        <div class="col-sm-offset-4 col-sm-4">
+                            <i class="glyphicon glyphicon-calendar form-control-feedback"></i>
+                            <input pattern="(0[1-9]|1[0-9]|2[0-9]|3[01]).(0[1-9]|1[012]).[0-9]{4}" ng-model="info.date" type="text" class="form-control" id="date" placeholder="Date" required>
+                        </div>
+                    </div>
+                    <div class="form-group has-feedback has-feedback-left">
+                        <div class="col-sm-offset-4 col-sm-4">
+                            <i class="glyphicon glyphicon-user form-control-feedback"></i>
+                            <input pattern="[a-zA-Z\s]+" ng-model="info.payee" type="text" class="form-control" id="payee" placeholder="Payee" required>
+                        </div>
+                    </div>
+                    <div class="form-group has-feedback has-feedback-left">
+                        <div class="col-sm-offset-4 col-sm-4">
+                            <i class="glyphicon glyphicon-usd form-control-feedback"></i>
+                            <input pattern="[0-9]+" minlength="2" maxlength="8" ng-model="info.amount" type="text" class="form-control" id="amount" placeholder="Amount" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-4  col-sm-4">
+                            <button type="submit" class="btn btn-default btn-green btn-green-lg">PROCESS</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="top-bar">
+            <div class="cta-footer text-center">
+                <div class="col-sm-8 col-sm-offset-2" role="group" aria-label="...">
+                    <button ng-repeat="check in checks" ng-click="retriveCheck($index)" type="button" class="btn btn-md btn-default check-icon">{{$index + 1}}</button>
+                </div>
+                <div class="content">
+                    <div class="check-image">
+                        <img class="img-responsive" src="Images/Check.jpg" alt="">
+                        <input type="text" class="check-fields date" ng-model="info.date">
+                        <input type="text" class="check-fields amount" ng-model="info.amount">
+                        <input type="text" class="check-fields sum" ng-model="sum">
+                        <input type="text" class="check-fields payee" ng-model="info.payee">
+                    </div>
+                </div>
+            </div>
+            <div class="footer col-sm-11 col-sm-offset-2 u-margin-bottom-10">
+                <div class="sponsors pull-left u-margin-10"><img src="Images/TelstraLogo.png" alt=""></div>
+                <div class="sponsors pull-left u-margin-10"><img src="Images/GeoTrust.png" alt=""></div>
+                <div class="pull-left u-font-size-10 u-line-height-16 u-margin-10"> Australian credit licence 454782 | ABN 47 154 775 667 </br>© Copyright 2015 Prospa Advance PTY Limited | Privacy Policy</div>
+                <div class="social pull-right u-margin-10">
+                    <img src="Images/Social/Facebook.png" alt="">
+                    <img src="Images/Social/Twitter.png" alt="">
+                    <img src="Images/Social/LinkedIn.png" alt="">
+                    <img src="Images/Social/Vimeo.png" alt="">
+                </div>
+            </div>
+            <div class="footer col-sm-11 col-sm-offset-2 u-line-height-14 u-font-size-10 u-margin-top-10">The Small Business Loan is offered by Prospa ABN 47 154 775 667 Australian credit licence 454782. Terms and conditions fees and charges apply on request by calling 1300 854 120 Westpac Banking Corporation ABN 33 007 457 141 is the introducer only and does not guarantee or support the Small Business Loan in any way.</div>
+    </main>
+</body>
+<script src="node_modules/angular/angular.min.js"></script>
+<script src="js/main.js"></script>
+
+</html>

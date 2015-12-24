@@ -1,0 +1,208 @@
+body {
+    background: @grey;
+    color: @grey-text;
+}
+
+.top-bar {
+    height: 30px;
+    font-size: 13px;
+    line-height: 30px;
+}
+
+.header {
+    height: 100px;
+    background: @white;
+}
+
+.white{
+    background: @white;
+}
+
+.cta-header {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    height: 300px;
+    width: 2000px;
+    color: @white;
+    background-image: url('../Images/CTAHeader.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    h1 {
+        text-transform: uppercase;
+        font-size: 30px;
+    }
+    .content {
+        display: inline-block;
+    }
+}
+
+.footer {
+    margin: 40px;
+    display: inline-block;
+    .social {
+        display: inline-block;
+        width: 140px;
+        float: right !important;
+    }
+}
+
+.cta-footer {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    height: 557px;
+    width: 2000px;
+    color: @white;
+    background-image: url('../Images/CheckBG.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    h1 {
+        text-transform: uppercase;
+        font-size: 30px;
+    }
+    .content {
+        display: inline-block;
+    }
+}
+
+.btn-transparent {
+    color: @white;
+    background: transparent;
+    border: 1px solid #fff;
+    font-size: 14px;
+    &:hover {
+        color: #000;
+        background: @white;
+    }
+    &:focus {
+        color: #000;
+        background: @white;
+    }
+}
+
+.middle {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    height: 545px;
+    width: 2000px;
+    color: @grey-text;
+    h1 {
+        text-transform: uppercase;
+        font-size: 30px;
+    }
+    .content {
+        display: inline-block;
+    }
+}
+
+.btn-green {
+    background: @green;
+    color: @white;
+    border: none;
+    box-shadow: 0px 4px 0px @dark-green;
+    &:hover {
+        background: @green;
+        color: @white;
+        box-shadow: 0px 2px 0px @dark-green;
+    }
+    &:focus {
+        background: @green;
+        color: @white;
+        box-shadow: 0px 0px 0px @dark-green;
+    }
+}
+
+.btn-green-lg {
+    min-width: 160px;
+    min-height: 46px;
+}
+
+.btn-check-num {
+    background: transparent;
+    color: #555;
+    border: 1 solid #000000;
+    &:hover {
+        background: transparent;
+        color: #555;
+    }
+    &:focus {
+        background: transparent;
+        color: #555;
+    }
+}
+
+.has-feedback .form-control {
+    padding-left: 30px;
+}
+
+.form-control-feedback {
+    left: 15px;
+}
+
+.check-image {
+    position: relative;
+}
+
+.check-icon {
+    // font-family: 'handwittern';
+    font-size: 16px;
+    // letter-spacing: 2px;
+    line-height: 2px;
+    display: inline-block;
+    text-align: center;
+    width: 40px;
+    height: 30px;
+    background: @light-yellow;
+    color: @black;
+    // font-weight: bold;
+    margin: 8px;
+    cursor: pointer;
+}
+
+.check-fields {
+    font-family: 'handwittern';
+    font-size: 24px;
+    position: absolute;
+    background: transparent;
+    color: @black;
+    border: none;
+}
+
+.sponsors {
+    display: inline-block;
+    width: 120px;
+    height: 40px;
+    border-right: 1px solid #ddd;
+}
+
+.amount {
+    top: 41%;
+    right: 5%;
+    width: 19%;
+    height: 10%;
+}
+
+.date {
+    top: 24%;
+    right: 3%;
+    width: 19%;
+    height: 10%;
+}
+
+.sum {
+    top: 46%;
+    right: 25%;
+    width: 59%;
+    height: 10%;
+}
+
+.payee {
+    top: 33%;
+    right: 62%;
+    width: 29%;
+    height: 10%;
+}
