@@ -2,7 +2,7 @@
 
 var app = angular.module('prospa', []);
 
-app.controller('propsaCheck', ['$scope', '$location', '$anchorScroll', function($scope, $location, $anchorScroll) {
+app.controller('prospaCheck', ['$scope', '$location', '$anchorScroll', function($scope, $location, $anchorScroll) {
     $scope.checks = [];
     $scope.info = {
         date: "23/12/2015",

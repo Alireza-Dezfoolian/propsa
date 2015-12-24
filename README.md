@@ -1,4 +1,4 @@
-# prospa
+# prospa.
 prospa Check Process app
 @copyright prospa
 
